@@ -24,8 +24,12 @@ export function getHouseForm() {
       <input type="value" class="form-control" name="beds" id="beds" aria-describedby="beds" placeholder="Bedrooms..." min="1" required>
     </div>
     <div>
-      <label for="bbaths" class="form-label">Bathrooms</label>
+      <label for="baths" class="form-label">Bathrooms</label>
       <input type="value" class="form-control" name="baths" id="baths" aria-describedby="baths" placeholder="Bathrooms..." min="1" required>
+    </div>
+    <div>
+      <label for="acres" class="form-label">Acres</label>
+      <input type="value" class="form-control" name="acres" id="acres" aria-describedby="acres" placeholder="Acres... required>
     </div>
     <div>
       <label for="price" class="form-label">Price</label>
