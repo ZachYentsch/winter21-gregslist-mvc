@@ -7,8 +7,8 @@ class AppState extends EventEmitter {
   /** @type {import('./Models/Car').Car[]} */
   cars = [
     new Car({ make: 'ford', model: 'focus', year: 2008, price: 7500, description: 'Like new only 100,000 miles', color: '#91e880', imgUrl: 'https://i.pinimg.com/originals/c1/d1/a8/c1d1a890282f877de2ef09cd53131cdb.jpg' }),
-    new Car({ make: 'ford', model: 'taurus wagon', year: 1989, price: 1000, description: 'Great Family vehicle for long vacations', color: '#93776a', imgUrl: 'https://cdn.motor1.com/images/mgl/xWqly/s3/home-built-christmas-vacation-display-includes-movie-s-epic-vehicles.jpg' }),
-    new Car({ make: 'Elven', model: 'Sleigh', year: 1700, price: 900000, description: 'It only works once a year, and has 8 horsepower', color: '#f44545', imgUrl: 'https://cdn.shopify.com/s/files/1/1319/9267/products/metal-sleigh_1_1024x1024.jpg' })
+    new Car({ make: 'Ferrari', model: 'F12', year: 2016, price: 70000, description: 'Loud, I know what I have', color: '#12130e', imgUrl: 'https://th.bing.com/th/id/OIP.fOvTmTApvby5cifioaAAPAHaEu?pid=ImgDet&rs=1' }),
+    new Car({ make: 'Mitsubishi', model: 'Lancer EVO IX', year: 2003, price: 900000, description: 'Everyones Dream Car', color: '#53afcd', imgUrl: 'https://1.bp.blogspot.com/-uQvyI8Qr6fk/XpphWcedrMI/AAAAAAAAMIs/4dOT8-OoyW4ntOtn5fk8E13S3JXi0ZYkQCLcBGAsYHQ/s1600/the-lowdown-evo-9-00kbye-behind-the-scenes-dated-video_21-1536x1024.jpg' })
   ]
   /** @type {import('./Models/House').House[]} */
   houses = [
