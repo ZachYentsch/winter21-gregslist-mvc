@@ -18,7 +18,7 @@ export class Job {
           <div class="bg-white shadow rounded">
              <div class="p-3">
                  <h4 class="text-center p-1 text-center"><b>${this.title} NEEDED</b></h4>
-                 <h6 class="text-center p-1 text-center"><b>${this.company} NEEDED</b></h6>
+                 <h6 class="text-center p-1 text-center"><b>${this.company}</b></h6>
                  <p class="m-0">${this.description}</p>
                  <p class="text-center uppercase p-1 text-center"><b>${this.time}</b></p>
                  <p class="m-0 justify-content-between p-1 text-center">$${this.pay}</p>
@@ -30,7 +30,7 @@ export class Job {
                  </ul>
               </div>
             <div class="text-end px-3">
-      <i class="mdi mdi-delete selectable" onclick="app.housesController.removeHouse('${this.id}')"></i>
+      <i class="mdi mdi-delete selectable" onclick="app.JobsController.removeJob('${this.id}')"></i>
             </div>
           </div>
      </div>

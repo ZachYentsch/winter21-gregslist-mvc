@@ -1,4 +1,5 @@
 import { ProxyState } from "../AppState";
+import { getJobForm } from "c:/source/codeworks/gregslist-mvc/app/Component/JobForm";
 import { JobsService } from "../Services/JobsService";
 
 // JobsService
@@ -13,7 +14,7 @@ function _drawJobs() {
 
 export class JobsController {
     constructor() {
-        ProxyState.on('houses', _drawHouses)
+        ProxyState.on('Jobs', _drawJobs)
     }
     _drawJobs() {
         _drawJobs()

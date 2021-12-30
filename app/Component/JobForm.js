@@ -1,6 +1,6 @@
 export function getJobForm() {
-    return `
-    <form onsubmit="app.jobsController.createJob()">
+  return `
+    <form onclick="app.jobsController.drawJobs()">
     <div class="mb-3 d-flex justify-content-between">
       <div>
         <label for="title" class="form-label">Title</label>
