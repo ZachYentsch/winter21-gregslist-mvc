@@ -1,5 +1,6 @@
 import { ProxyState } from "../AppState.js"
 import { getCarform } from "../Component/CarForm.js"
+import { confirmation, toast } from "../Services/AlertService.js"
 import { carsService } from "../Services/CarsService.js"
 
 function _drawCars() {
@@ -39,9 +40,9 @@ export class CarsController {
       if (id == "undefined") {
         await carsService.createCar(carData)
       }
-      // else {
-      // NOTE NEED TO DO THIS FOR EDIT JUST LIKE LINE 38
-      // }
+      else {
+        await carsService.editCar(carData, id)
+      }
       // clear form
       form.reset()
       // close modal

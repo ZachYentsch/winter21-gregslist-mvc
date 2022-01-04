@@ -17,7 +17,7 @@ class CarsService {
   }
 
   async createCar(carData) {
-    const res = await api.post('cars')
+    const res = await api.post('cars', carData)
     console.log('post Car', res.data)
     ProxyState.cars = [new Car(res.data), ...ProxyState.cars]
   }
