@@ -5,7 +5,7 @@ import { JobsController } from "./Controllers/JobsController.js"
 class App {
   carsController = new CarsController()
   housesController = new HousesController()
-  JobsController = new JobsController()
+  jobsController = new JobsController()
 }
 
 window["app"] = new App()

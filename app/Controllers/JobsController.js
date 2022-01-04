@@ -1,9 +1,7 @@
-import { ProxyState } from "../AppState";
-import { getJobForm } from "c:/source/codeworks/gregslist-mvc/app/Component/JobForm";
-import { JobsService } from "../Services/JobsService";
+import { ProxyState } from "../AppState.js";
+import { getJobForm } from "../Component/JobForm.js";
+import { jobsService } from "../Services/jobsService.js";
 
-// JobsService
-// ProxyState
 
 function _drawJobs() {
     const jobs = ProxyState.jobs
@@ -14,9 +12,9 @@ function _drawJobs() {
 
 export class JobsController {
     constructor() {
-        ProxyState.on('Jobs', _drawJobs)
+        ProxyState.on('jobs', _drawJobs)
     }
-    _drawJobs() {
+    drawJobs() {
         _drawJobs()
         document.getElementById('modal-body-slot').innerHTML = getJobForm()
     }
@@ -34,7 +32,7 @@ export class JobsController {
             benefits: form.benefits.value,
             qualifications: form.qualifications.value,
         }
-        JobsService.createJob(jobData)
+        jobsService.createJob(jobData)
         form.reset()
         bootstrap.Modal.getOrCreateInstance(document.getElementById('new-listing')).hide()
     }

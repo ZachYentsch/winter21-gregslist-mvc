@@ -1,7 +1,5 @@
-import { ProxyState } from "../AppState";
-import { Job } from "../Models/Job";
-// Job
-// ProxyState
+import { ProxyState } from "../AppState.js";
+import { Job } from "../Models/Job.js";
 
 class JobsService {
     removeJob(id) {
@@ -13,4 +11,4 @@ class JobsService {
     }
 }
 
-export const JobsService = new JobsService()
+export const jobsService = new JobsService()

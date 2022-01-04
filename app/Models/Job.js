@@ -1,4 +1,4 @@
-import { generateId } from "../Utils/generateId";
+import { generateId } from "../Utils/generateId.js";
 
 export class Job {
     constructor(data) {
@@ -30,7 +30,7 @@ export class Job {
                  </ul>
               </div>
             <div class="text-end px-3">
-      <i class="mdi mdi-delete selectable" onclick="app.JobsController.removeJob('${this.id}')"></i>
+      <i class="mdi mdi-delete selectable" onclick="app.jobsController.removeJob('${this.id}')"></i>
             </div>
           </div>
      </div>
