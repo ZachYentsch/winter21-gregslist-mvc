@@ -58,11 +58,24 @@ export class CarsController {
       console.log('deleting', foundCar)
       if (await confirmation(`Are you sure you want to delete ${foundCar.make}?`)) {
         await carsService.removeCar(id)
-        // toast(`${foundcar.make} was removerd!`)
+        toast(`${foundcar.make} was removed!`)
       }
     } catch (error) {
-      toast(error.message)
       console.log(error.message)
+    }
+  }
+
+  async editCar(id) {
+    try {
+      let foundCar = ProxyState.cars.find(c => c.id == id)
+
+      bootstrap.Modal.getOrCreateInstance(document.getElementById('new-listing')).toggle()
+
+      document.getElementById('modal-body-slot').innerHTML = getCarform(foundCar)
+
+      console.log('Car in Edit', foundCar)
+    } catch {
+      console.log('error.message');
     }
   }
 }

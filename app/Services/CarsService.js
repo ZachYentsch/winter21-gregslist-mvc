@@ -21,6 +21,13 @@ class CarsService {
     console.log('post Car', res.data)
     ProxyState.cars = [new Car(res.data), ...ProxyState.cars]
   }
+
+  async editCar(carData, id) {
+    const res = await api.put(`cars/${id}`, carData)
+    let editedCarIndex = ProxyState.cars.findIndex(c => c.id == id)
+    ProxyState.cars.splice(editedCarIndex, 1, new Car(res.data))
+    ProxyState.cars = ProxyState.cars
+  }
 }
 
 export const carsService = new CarsService()
