@@ -62,5 +62,14 @@ export class HousesController {
         housesService.removeHouse(id)
     }
 
-
+    async editHouse(id) {
+        try {
+            let foundHouse = ProxyState.houses.find(h => h.id == id)
+            bootstrap.Modal.getOrCreateInstance(document.getElementById('new-listing')).toggle()
+            document.getElementById('modal-body-slot').innerHTML = getHouseForm(foundHouse)
+            console.log('House in edit', foundHouse)
+        } catch {
+            console.log('error.message')
+        }
+    }
 }
