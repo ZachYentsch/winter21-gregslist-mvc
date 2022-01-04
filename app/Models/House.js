@@ -3,16 +3,16 @@ import { generateId } from "../Utils/generateId.js";
 
 export class House {
   constructor(data) {
-    this.id = generateId()
-    this.address = data.address
-    this.year = data.year
-    this.sqft = data.sqft
-    this.price = data.price
-    this.beds = data.beds
-    this.baths = data.baths
-    this.acres = data.acres
-    this.img = data.img
-    this.description = data.description
+    this.id = data.id
+    this.address = data.address || ''
+    this.year = data.year || 0
+    this.sqft = data.sqft || ''
+    this.price = data.price || 0
+    this.beds = data.beds || ''
+    this.baths = data.baths || ''
+    this.acres = data.acres || ''
+    this.img = data.imgUrl || ''
+    this.description = data.description || ''
   }
 
   get Template() {
@@ -30,6 +30,7 @@ export class House {
         <p class="m-0">${this.description}</p>
       </div>
       <div class="text-end px-3">
+      <i class="mdi mdi-pencil selectable" onclick="app.housesController.editCar('${this.id}')"></i>
       <i class="mdi mdi-delete selectable" onclick="app.housesController.removeHouse('${this.id}')"></i>
       </div>
     </div>
