@@ -2,12 +2,13 @@ import { ProxyState } from "../AppState.js"
 import { House } from "../Models/House.js"
 import { api } from "./AxiosService.js"
 
+
 class HousesService {
 
     async getAllHouses() {
         const res = await api.get('houses')
         console.log('house res', res)
-        ProxyState.houses = res.data.map(h => newHouse(h))
+        ProxyState.houses = res.data.map(h => new House(h))
         console.log('proxy House', ProxyState.houses)
     }
 

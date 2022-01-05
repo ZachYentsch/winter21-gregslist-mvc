@@ -14,6 +14,7 @@ function _drawHouses() {
 export class HousesController {
     constructor() {
         ProxyState.on('houses', _drawHouses)
+        housesService.getAllHouses()
     }
     drawHouses() {
         _drawHouses()
@@ -52,7 +53,7 @@ export class HousesController {
         try {
             let foundHouse = ProxyState.houses.find(h => h.id == id)
             console.log('deleting', foundHouse)
-            if (await confirmation(`Are you sure you want to delete ${foundHouse.}?`)) {
+            if (await confirmation(`Are you sure you want to delete ${foundHouse.price}?`)) {
                 await housesService.removeHouse(id)
                 toast(`The listing for ${foundHouse.price} was removed!`)
             }

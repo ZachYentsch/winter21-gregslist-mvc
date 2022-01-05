@@ -1,4 +1,4 @@
-import { House } from "../Models/House"
+import { House } from "../Models/House.js"
 
 
 export function getHouseForm(houseData = {}) {
